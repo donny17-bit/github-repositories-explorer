@@ -10,16 +10,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [user, setUser] = useState(Array);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(String);
 
   const getUser = async (e: any) => {
     e.preventDefault();
-    const result = await octokit.request("GET /search/users", {
-      q: search,
-    });
-    console.log(result);
-    setUser(result.data.items.slice(0, 5));
-    console.log(user);
+
+    if (search) {
+      const result = await octokit.request("GET /search/users", {
+        q: search,
+      });
+      setUser(result.data.items.slice(0, 5));
+      console.log(user);
+    }
   };
 
   const onChange = (e: any) => {
