@@ -11,11 +11,11 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const [user, setUser] = useState(Array);
   const [search, setSearch] = useState(String);
-  const [enable, setEnable] = useState(false);
+  const [notif, setNotif] = useState(String);
 
   const getUser = async (e: any) => {
     e.preventDefault();
-    setEnable(!enable);
+    setNotif(search);
     console.log(search.trim().length);
     if (search.trim().length) {
       const result = await octokit.request("GET /search/users", {
@@ -56,11 +56,11 @@ export default function Home() {
             Search
           </button>
         </form>
-        {!user.length ? (
+        {!notif ? (
           <></>
         ) : (
           <p className="flex items-center mt-2 font-normal flex-col">
-            Showing users for {search}
+            Showing users for {notif}
           </p>
         )}
         <section className="flex flex-col items-center mt-2">

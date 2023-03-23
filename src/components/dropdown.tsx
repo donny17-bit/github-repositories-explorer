@@ -55,7 +55,7 @@ export function Dropdown({ login }: dropdownProps) {
     <>
       <button
         type="button"
-        className="bg-gray-500 rounded flex justify-between p-2 mt-2 w-1/3 hover:bg-gray-400"
+        className=" bg-blue-800 rounded flex justify-between p-2 mt-2 w-1/3 hover:bg-blue-700"
         onClick={() => clicked(login)}
       >
         {login}
@@ -79,16 +79,18 @@ export function Dropdown({ login }: dropdownProps) {
         repos.map((item: any) => (
           <div
             key={item.id}
-            className="w-60 h-auto bg-gray-500 rounded mt-2 p-2"
+            className="w-1/3 h-auto bg-zinc-600 hover:bg-gray-500 rounded mt-2 p-2 "
           >
             <div className="flex flex-row justify-between">
-              <p className="font-semibold text-base">{item.name}</p>
+              <p className="font-semibold text-base break-words w-9/12">
+                {item.name}
+              </p>
               <p className="flex font-medium">
                 {item.stargazers_count} &nbsp;
                 <StarIcon className="h-5 w-5 text-yellow-300" />
               </p>
             </div>
-            <div className="w-48 mt-1">
+            <div className="mt-1 break-words w-9/12">
               <p className="text-xs font-normal">{item.description}</p>
             </div>
           </div>
