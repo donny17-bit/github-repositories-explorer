@@ -55,7 +55,7 @@ export function Dropdown({ login }: dropdownProps) {
     <>
       <button
         type="button"
-        className="bg-gray-500 rounded flex justify-between p-2 mt-2 w-60 hover:bg-gray-400"
+        className="bg-gray-500 rounded flex justify-between p-2 mt-2 w-1/3 hover:bg-gray-400"
         onClick={() => clicked(login)}
       >
         {login}

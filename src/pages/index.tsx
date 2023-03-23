@@ -11,11 +11,13 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const [user, setUser] = useState(Array);
   const [search, setSearch] = useState(String);
+  const [enable, setEnable] = useState(false);
 
   const getUser = async (e: any) => {
     e.preventDefault();
-
-    if (search) {
+    setEnable(!enable);
+    console.log(search.trim().length);
+    if (search.trim().length) {
       const result = await octokit.request("GET /search/users", {
         q: search,
       });
@@ -43,12 +45,12 @@ export default function Home() {
         >
           <input
             type="text"
-            className="w-60 h-8 p-2 bg-gray-200 text-gray-700 font-normal rounded-sm mt-10"
+            className="w-1/3 h-8 p-2 bg-gray-200 text-gray-700 font-normal rounded-sm mt-10"
             value={search}
             onChange={(e) => onChange(e)}
           />
           <button
-            className="bg-blue-700 w-60 h-10 rounded-md font-medium hover:bg-blue-600 hover:text-white active:bg-blue-700 mt-5"
+            className="bg-blue-700 w-1/3 h-10 rounded-md font-medium hover:bg-blue-600 hover:text-white active:bg-blue-700 mt-5"
             type="submit"
           >
             Search
