@@ -14,7 +14,6 @@ export default function Home() {
   const getUser = async (e: any) => {
     e.preventDefault();
     setNotif(search);
-    console.log(search.trim().length);
     if (search.trim().length) {
       const result = await octokit.request("GET /search/users", {
         q: search,

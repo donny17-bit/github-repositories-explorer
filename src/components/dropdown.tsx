@@ -109,7 +109,7 @@ export function Dropdown({ login }: dropdownProps) {
         ) : (
           <div className="max-sm:w-60 w-1/3 h-auto bg-zinc-600 hover:bg-gray-500 rounded mt-2 justify-center flex">
             <p className="font-semibold text-base break-words p-2 w-fit">
-              This user doesn't have any repositories
+              This user doesn&rsquo;t have any repositories
             </p>
           </div>
         )
