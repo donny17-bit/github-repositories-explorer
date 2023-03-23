@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import octokit from "../utils/octokit";
 import { Dropdown } from "../components/dropdown";
 
@@ -22,7 +20,6 @@ export default function Home() {
         q: search,
       });
       setUser(result.data.items.slice(0, 5));
-      console.log(user);
     }
   };
 
@@ -39,18 +36,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <h1 className="flex justify-center top-14 mb-5 pb-5 relative font-extrabold text-2xl">
+          Github Repository Explorer
+        </h1>
         <form
           className="flex items-center flex-col"
           onSubmit={(e) => getUser(e)}
         >
           <input
             type="text"
-            className="w-1/3 h-8 p-2 bg-gray-200 text-gray-700 font-normal rounded-sm mt-10"
+            className="w-1/3 max-sm:w-60 h-8 p-2  bg-gray-200 text-gray-700 font-normal rounded-sm mt-10"
             value={search}
             onChange={(e) => onChange(e)}
+            placeholder="Enter Username"
           />
           <button
-            className="bg-blue-700 w-1/3 h-10 rounded-md font-medium hover:bg-blue-600 hover:text-white active:bg-blue-700 mt-5"
+            className="bg-blue-700 w-1/3 max-sm:w-60 h-10 rounded-md font-medium hover:bg-blue-600 hover:text-white active:bg-blue-700 mt-5"
             type="submit"
           >
             Search
