@@ -1,4 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align='center'>Github Repositories Explorer</h1>
+  <p align="center">
+    <a href="https://github-repositories-xplorer.vercel.app/">Demo App</a>
+    ·
+    <a href="https://github.com/donny17-bit/github-repositories-explorer/issues">Report Bug</a>
+  </p>
+
+## About The Project
+
+With github repositories explorer you can view user repositories by their github username. Please star and fork this repo if you like it.
+
+## Built With
+
+[![NextJs](https://img.shields.io/badge/NextJs-13-green)](https://nextjs.org/)
+[![NodeJs](https://img.shields.io/badge/nodeJS-18.14.2-orange)](https://nodejs.org/en/download/)
+[![Tailwincss](https://img.shields.io/badge/Tailwindcss-3.2.7-blue)](https://tailwindcss.com)
 
 ## Getting Started
 
@@ -21,17 +36,5 @@ yarn dev
 token=YOUR_GITHUB_FINE_TOKEN
 ```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployed on Vercel
