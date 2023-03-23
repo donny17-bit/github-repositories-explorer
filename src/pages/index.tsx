@@ -4,8 +4,6 @@ import { Inter } from "next/font/google";
 import octokit from "../utils/octokit";
 import { Dropdown } from "../components/dropdown";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   const [user, setUser] = useState(Array);
   const [search, setSearch] = useState(String);
